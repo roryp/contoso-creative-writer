@@ -139,9 +139,12 @@ module searchService '../search/search-services.bicep' = {
     name: 'search'
     params: {
       name: searchServiceName
-      location: 'eastus'
+      location: 'eastus2'
       semanticSearch: 'standard'
       disableLocalAuth: true
+      sku: {
+        name: 'standard3'
+      }
     }
   }
 output keyVaultId string = keyVault.outputs.id
