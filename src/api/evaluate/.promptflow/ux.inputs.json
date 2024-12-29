@@ -1,0 +1,14 @@
+{
+  "chat_list": [],
+  "prompty_chat_list": [
+    {
+      "name": "friendliness.prompty",
+      "inputs": {
+        "response": "hi"
+      }
+    }
+  ],
+  "init": {
+    "friendliness.prompty": {}
+  }
+}

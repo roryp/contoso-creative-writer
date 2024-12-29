@@ -139,11 +139,11 @@ module searchService '../search/search-services.bicep' = {
     name: 'search'
     params: {
       name: searchServiceName
-      location: 'eastus2'
+      location: 'eastus'
       semanticSearch: 'standard'
       disableLocalAuth: true
       sku: {
-        name: 'standard3'
+        name: 'standard'
       }
     }
   }
