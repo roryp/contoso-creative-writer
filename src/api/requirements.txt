@@ -3,7 +3,7 @@ fastapi[standard]
 openai
 requests
 prompty[azure]==0.1.23
-promptflow==1.16.0
+promptflow==1.8.0
 promptflow-evals
 pandas
 azure-monitor-opentelemetry-exporter
