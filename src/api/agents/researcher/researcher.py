@@ -90,8 +90,10 @@ def execute(instructions: str, feedback: str = "No feedback"):
         "researcher.prompty", inputs={"instructions": instructions, "feedback": feedback}
     )
 
+
     research = []
     for f in fns:
+        print(f)
         fn = functions[f.name]
         args = json.loads(f.arguments)
         r = fn(**args)
