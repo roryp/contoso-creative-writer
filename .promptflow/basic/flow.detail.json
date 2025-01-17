@@ -1,0 +1,237 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "b2b3ed5e-64c6-4dc0-8171-b47ff2083ad7_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "firstName": "Seth",
+        "context": "The Alpine Explorer Tent boasts a detachable divider for privacy,  numerous mesh windows and adjustable vents for ventilation, and  a waterproof design. It even has a built-in gear loft for storing  your outdoor essentials. In short, it's a blend of privacy, comfort,  and convenience, making it your second home in the heart of nature!\n",
+        "question": "What can you tell me about your tents?"
+      },
+      "output": {
+        "output": "Hey Seth! 🏕️\n\nOur Alpine Explorer Tent is a real gem for outdoor enthusiasts. Here's the lowdown:\n\n- **Privacy**: It features a detachable divider, so you can create separate spaces when needed.\n- **Ventilation**: Numerous mesh windows and adjustable vents ensure you get plenty of fresh air.\n- **Waterproof**: Keeps you dry no matter the weather.\n- **Convenience**: Equipped with a built-in gear loft to store your essentials.\n\nIt’s like having your second home right in the middle of nature! Sounds perfect for your next adventure, doesn't it? 🌲✨"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "b2b3ed5e-64c6-4dc0-8171-b47ff2083ad7",
+      "root_run_id": "b2b3ed5e-64c6-4dc0-8171-b47ff2083ad7",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2025-01-17T08:48:06.887904Z",
+      "end_time": "2025-01-17T08:48:09.352721Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "ExamplePrompt",
+          "type": "Function",
+          "inputs": {},
+          "output": "Hey Seth! 🏕️\n\nOur Alpine Explorer Tent is a real gem for outdoor enthusiasts. Here's the lowdown:\n\n- **Privacy**: It features a detachable divider, so you can create separate spaces when needed.\n- **Ventilation**: Numerous mesh windows and adjustable vents ensure you get plenty of fresh air.\n- **Waterproof**: Keeps you dry no matter the weather.\n- **Convenience**: Equipped with a built-in gear loft to store your essentials.\n\nIt’s like having your second home right in the middle of nature! Sounds perfect for your next adventure, doesn't it? 🌲✨",
+          "start_time": 1737103686.888028,
+          "end_time": 1737103689.351927,
+          "error": null,
+          "children": [
+            {
+              "name": "Prompty",
+              "type": "Function",
+              "inputs": {},
+              "output": "Hey Seth! 🏕️\n\nOur Alpine Explorer Tent is a real gem for outdoor enthusiasts. Here's the lowdown:\n\n- **Privacy**: It features a detachable divider, so you can create separate spaces when needed.\n- **Ventilation**: Numerous mesh windows and adjustable vents ensure you get plenty of fresh air.\n- **Waterproof**: Keeps you dry no matter the weather.\n- **Convenience**: Equipped with a built-in gear loft to store your essentials.\n\nIt’s like having your second home right in the middle of nature! Sounds perfect for your next adventure, doesn't it? 🌲✨",
+              "start_time": 1737103686.888459,
+              "end_time": 1737103689.351734,
+              "error": null,
+              "children": [
+                {
+                  "name": "convert_prompt_template",
+                  "type": "Function",
+                  "inputs": {
+                    "template": "\nsystem:\nYou are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping {{firstName}} to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to {{firstName}}:\n{{context}}\n\nuser:\n{{question}}\n",
+                    "inputs": {
+                      "firstName": "Seth",
+                      "context": "The Alpine Explorer Tent boasts a detachable divider for privacy,  numerous mesh windows and adjustable vents for ventilation, and  a waterproof design. It even has a built-in gear loft for storing  your outdoor essentials. In short, it's a blend of privacy, comfort,  and convenience, making it your second home in the heart of nature!\n",
+                      "question": "What can you tell me about your tents?"
+                    }
+                  },
+                  "output": [
+                    {
+                      "role": "system",
+                      "content": "You are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping Seth to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to Seth:\nThe Alpine Explorer Tent boasts a detachable divider for privacy,  numerous mesh windows and adjustable vents for ventilation, and  a waterproof design. It even has a built-in gear loft for storing  your outdoor essentials. In short, it's a blend of privacy, comfort,  and convenience, making it your second home in the heart of nature!"
+                    },
+                    {
+                      "role": "user",
+                      "content": "What can you tell me about your tents?"
+                    }
+                  ],
+                  "start_time": 1737103686.88902,
+                  "end_time": 1737103686.891637,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "d1fcc9eb-e713-4ed6-b54e-1b6c7f225d20",
+                  "id": "7e53acdf-2393-4471-9d49-53b010737a17",
+                  "function": "convert_prompt_template",
+                  "system_metrics": {}
+                },
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "max_tokens": 3000,
+                    "model": "gpt-4",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are an AI assistant who helps people find information. As the assistant, \nyou answer questions briefly, succinctly, and in a personable manner using \nmarkdown and even add some personal flair with appropriate emojis.\n\n# Customer\nYou are helping Seth to find answers to their questions.\nUse their name to address them in your responses.\n\n# Context\nUse the following context to provide a more personalized response to Seth:\nThe Alpine Explorer Tent boasts a detachable divider for privacy,  numerous mesh windows and adjustable vents for ventilation, and  a waterproof design. It even has a built-in gear loft for storing  your outdoor essentials. In short, it's a blend of privacy, comfort,  and convenience, making it your second home in the heart of nature!"
+                      },
+                      {
+                        "role": "user",
+                        "content": "What can you tell me about your tents?"
+                      }
+                    ]
+                  },
+                  "output": {
+                    "id": "chatcmpl-AqcJLqDqVaW4vCgDyFyXMw4ZUy1gp",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "Hey Seth! 🏕️\n\nOur Alpine Explorer Tent is a real gem for outdoor enthusiasts. Here's the lowdown:\n\n- **Privacy**: It features a detachable divider, so you can create separate spaces when needed.\n- **Ventilation**: Numerous mesh windows and adjustable vents ensure you get plenty of fresh air.\n- **Waterproof**: Keeps you dry no matter the weather.\n- **Convenience**: Equipped with a built-in gear loft to store your essentials.\n\nIt’s like having your second home right in the middle of nature! Sounds perfect for your next adventure, doesn't it? 🌲✨",
+                          "refusal": null,
+                          "role": "assistant",
+                          "audio": null,
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "protected_material_code": {
+                            "filtered": false,
+                            "detected": false
+                          },
+                          "protected_material_text": {
+                            "filtered": false,
+                            "detected": false
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1737103687,
+                    "model": "gpt-4o-2024-05-13",
+                    "object": "chat.completion",
+                    "service_tier": null,
+                    "system_fingerprint": "fp_f3927aa00d",
+                    "usage": {
+                      "completion_tokens": 124,
+                      "prompt_tokens": 170,
+                      "total_tokens": 294,
+                      "completion_tokens_details": {
+                        "accepted_prediction_tokens": 0,
+                        "audio_tokens": 0,
+                        "reasoning_tokens": 0,
+                        "rejected_prediction_tokens": 0
+                      },
+                      "prompt_tokens_details": {
+                        "audio_tokens": 0,
+                        "cached_tokens": 0
+                      }
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "jailbreak": {
+                            "filtered": false,
+                            "detected": false
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1737103686.918568,
+                  "end_time": 1737103689.351454,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "d1fcc9eb-e713-4ed6-b54e-1b6c7f225d20",
+                  "id": "329b4bba-4f25-461d-803b-35a52112675b",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 124,
+                    "prompt_tokens": 170,
+                    "total_tokens": 294
+                  }
+                }
+              ],
+              "node_name": null,
+              "parent_id": "8ebb57e8-6ec0-4673-bfd1-755617172eb2",
+              "id": "d1fcc9eb-e713-4ed6-b54e-1b6c7f225d20",
+              "function": "Prompty",
+              "system_metrics": {
+                "completion_tokens": 124,
+                "prompt_tokens": 170,
+                "total_tokens": 294
+              }
+            }
+          ],
+          "node_name": null,
+          "parent_id": "",
+          "id": "8ebb57e8-6ec0-4673-bfd1-755617172eb2",
+          "function": "Prompty",
+          "system_metrics": {
+            "completion_tokens": 124,
+            "prompt_tokens": 170,
+            "total_tokens": 294
+          }
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "completion_tokens": 124,
+        "prompt_tokens": 170,
+        "total_tokens": 294,
+        "duration": 2.464817
+      },
+      "result": {
+        "output": "Hey Seth! 🏕️\n\nOur Alpine Explorer Tent is a real gem for outdoor enthusiasts. Here's the lowdown:\n\n- **Privacy**: It features a detachable divider, so you can create separate spaces when needed.\n- **Ventilation**: Numerous mesh windows and adjustable vents ensure you get plenty of fresh air.\n- **Waterproof**: Keeps you dry no matter the weather.\n- **Convenience**: Equipped with a built-in gear loft to store your essentials.\n\nIt’s like having your second home right in the middle of nature! Sounds perfect for your next adventure, doesn't it? 🌲✨"
+      },
+      "upload_metrics": false,
+      "otel_trace_id": "0xc262c040f2dc0dcf82fbf0eefb3aeadc",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": []
+}
